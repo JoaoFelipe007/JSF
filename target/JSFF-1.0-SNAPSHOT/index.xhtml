@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui" >
+    <h:body> 
+        <p:importEnum type="main.br.com.devdojo.maratonaJsf.model.enums.Turno" var="Turno"
+                      allSuffix="ALL_ENUM_VALUES"/> 
+        <h:outputLabel>Hello Wooooooooord</h:outputLabel><br/>
+        <h:outputLabel>Hello Wooooooooord</h:outputLabel><br/>
+        <h:outputLabel value="#{estudanteRegistrarBean.estudante.nome}"/><br/>
+        <h:outputLabel value="#{estudanteRegistrarBean.estudante.sobrenome}" /><br/>
+        <h:outputLabel value="#{estudanteRegistrarBean.estudante.sobrenome}" /><br/>
+        <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 eq estudanteRegistrarBean.estudante.nota2}"/><br/>
+        <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 == estudanteRegistrarBean.estudante.nota2}"/><br/>
+        <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 eq estudanteRegsitrarBean.estudante.nota2 and estudanteRegistrarBean.estudante.nome.equals('Willian')}"/><br/>
+
+        <h:outputText value="Comparando Valores: "/><br/>
+        <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 le estudanteRegistrarBean.estudante.nota2}"/><br/>
+        <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 eq 0 ? 'Zero':'O numero é: ' += estudanteRegistrarBean.estudante.nota1}"/><br/>
+        <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1 = 41}"/><br/>
+        <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1}"/><br/>
+        <h:outputText value="Enum"/><br/>
+        <h:outputLabel value="#{estudanteRegistrarBean.estudante.turno eq Turno.VESPERTINO}"/><br/>
+        <!--Array-->
+        <h:outputLabel value="#{estudanteRegistrarBean.nomesArray[0]} #{estudanteRegistrarBean.nomesArray[1]} #{estudanteRegistrarBean.nomesArray[2]}"/><br/>
+        <!--ui:reapt array-->
+        <ui:repeat value="#{estudanteRegistrarBean.nomesArray}" var="nome">
+            <h:outputLabel value="#{nome}"/><br/>
+        </ui:repeat>
+        
+        <!--List-->
+        <h:outputLabel value="#{estudanteRegistrarBean.nomesLista.get(0)} #{estudanteRegistrarBean.nomesLista.get(1)} #{estudanteRegistrarBean.nomesLista.get(2)}"/><br/>
+        <!--ui:reapt List-->
+       <ui:repeat value="#{estudanteRegistrarBean.nomesLista}" var="nome">
+            <h:outputLabel value="#{nome}"/><br/>
+        </ui:repeat>
+
+        <!--ui:reapt Set-->
+        <h:outputLabel  value="-----SET-----"/><br/>
+        <ui:repeat value="#{estudanteRegistrarBean.nomesSet}" var="nome">
+            <h:outputLabel value="#{nome}"/>
+        </ui:repeat>
+
+
+    </h:body>
+</html>
+
+<!-- le = menor ou igual e lt= ao sinal de menor-->
+<!-- ge = maior ou igual e gt= ao sinal de maior-->
+<!-- not = operador de negação-->
+<!-- ne = !=-->
+<!-- le = menor ou igual e lt= ao sinal de menor-->
+<!-- div = para divisao e mod= para resto-->
+
