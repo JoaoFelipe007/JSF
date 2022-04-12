@@ -6,8 +6,10 @@ package main.br.com.devdojo.maratonaJsf.bean.estudante;
 
 import java.io.Serializable;
 import static java.util.Arrays.asList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import javax.inject.Named;
 import main.br.com.devdojo.maratonaJsf.model.Estudante;
@@ -23,7 +25,27 @@ public class EstudanteRegistrarBean implements Serializable {
     private String[] nomesArray = {"DevDojo", "eh", "Brabo"};
     private List<String> nomesLista = asList("Joao", "Rainne", "JH");
     private Set<String> nomesSet = new HashSet<>(asList("Cassio ", "Willian ", "Renato Augusto "));
+    private Map<String,String> nomesMap = new HashMap<>();
 
+    {
+        nomesMap.put(" Homem aranha","Força de Vontade");
+        nomesMap.put(" Capitão America","Fidelidade");
+        nomesMap.put(" Homem de Ferro","Playboy");
+    
+        for(Map.Entry<String, String> entry: nomesMap.entrySet()){
+            System.out.println(entry.getKey());
+            System.out.println(entry.getValue());
+        }
+    }
+    
+    public Map<String, String> getNomesMap() {
+        return nomesMap;
+    }
+
+    public void setNomesMap(Map<String, String> nomesMap) {
+        this.nomesMap = nomesMap;
+    }
+    
     public Set<String> getNomesSet() {
         return nomesSet;
     }

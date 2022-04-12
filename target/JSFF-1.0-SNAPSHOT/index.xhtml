@@ -30,18 +30,27 @@
         <ui:repeat value="#{estudanteRegistrarBean.nomesArray}" var="nome">
             <h:outputLabel value="#{nome}"/><br/>
         </ui:repeat>
-        
+
         <!--List-->
         <h:outputLabel value="#{estudanteRegistrarBean.nomesLista.get(0)} #{estudanteRegistrarBean.nomesLista.get(1)} #{estudanteRegistrarBean.nomesLista.get(2)}"/><br/>
         <!--ui:reapt List-->
-       <ui:repeat value="#{estudanteRegistrarBean.nomesLista}" var="nome">
+        <ui:repeat value="#{estudanteRegistrarBean.nomesLista}" var="nome">
             <h:outputLabel value="#{nome}"/><br/>
         </ui:repeat>
 
         <!--ui:reapt Set-->
         <h:outputLabel  value="-----SET-----"/><br/>
         <ui:repeat value="#{estudanteRegistrarBean.nomesSet}" var="nome">
-            <h:outputLabel value="#{nome}"/>
+            <h:outputLabel value="#{nome}"/><br/>
+        </ui:repeat>
+
+        <!--Map-->
+        <h:outputLabel  value="-----Map-----"/><br/>
+        <h:outputLabel value="#{estudanteRegistrarBean.nomesMap.get('Homem Aranha')}"/>
+        <h:outputLabel value="#{estudanteRegistrarBean.nomesMap}"/><br/>
+        <!--ui:reapt Map-->
+        <ui:repeat value="#{estudanteRegistrarBean.nomesMap.entrySet().toArray()}" var="nome">
+            <h:outputLabel value="#{nome.key}-#{nome.value}"/><br/>
         </ui:repeat>
 
 
