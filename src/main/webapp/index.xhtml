@@ -52,9 +52,43 @@
         <ui:repeat value="#{estudanteRegistrarBean.nomesMap.entrySet().toArray()}" var="nome">
             <h:outputLabel value="#{nome.key}-#{nome.value}"/><br/>
         </ui:repeat>
+        <!--Metodo-->
+        #{estudanteRegistrarBean.executaar("Beleza")}
+        #{estudanteRegistrarBean.executarRetorno("Cristiano Ronaldo")}<br/>
+        #{estudanteRegistrarBean.executarRetorno(estudanteRegistrarBean.estudante.nome)}       
+        <h:form>
+            <h:commandButton value="ir para proxima pagina"  action="#{estudanteRegistrarBean.irPara()}"/><br/>
+            <!--Passando valores js com EL-->
+            <h:commandButton value="fazer magica"   onclick="fazerMagica('Kame...kame haaaaaaaaaaaa ')"/><br/>
+            <h:commandButton value="Mostrar Nome" onclick="mostrarNome('#{estudanteRegistrarBean.estudante.nome}')"/>
+        </h:form>
 
+        <!--CSS com EL-->
+        <ui:repeat value="#{estudanteRegistrarBean.nomesLista}" var="nome" varStatus="status">
+            <h:outputLabel value="#{nome}" style="color: #{status.index mod 2 == 0 ? 'red' : 'green'}"/><br/>
+        </ui:repeat>
+
+        <h:form>
+            <h:outputLabel value="#{estudanteRegistrarBean.estudante.nome}"/><br/>
+            <h:outputLabel value="#{estudanteRegistrarBean.estudante.sobrenome}" /><br/>
+            <h:outputLabel value="#{estudanteRegistrarBean.estudante.turno}" /><br/>
+            <h:commandButton value="Mostrar Notas" action="#{estudanteRegistrarBean.exibirNotas}"/><br/>
+            <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1}" rendered="#{estudanteRegistrarBean.mostrarNotas}" /><br/>
+            <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota2}" rendered="#{estudanteRegistrarBean.mostrarNotas}"/><br/>
+            <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota3}" rendered="#{estudanteRegistrarBean.mostrarNotas}"/><br/>
+            <h:outputLabel value="#{estudanteRegistrarBean.mostrarNotas}"/><br/>
+        </h:form>
 
     </h:body>
+    <script type="text/javascript">
+        function fazerMagica(magica) {
+            alert(magica);
+        }
+
+        function mostrarNome(nome) {
+            alert(nome);
+        }
+    </script>
 </html>
 
 <!-- le = menor ou igual e lt= ao sinal de menor-->
