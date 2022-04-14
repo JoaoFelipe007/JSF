@@ -3,3 +3,4 @@ mavenproject1\JAXRSConfiguration.class
 main\br\com\devdojo\maratonaJsf\model\Estudante.class
 main\br\com\devdojo\maratonaJsf\bean\estudante\EstudanteRegistrarBean.class
 resources\JavaEE8Resource.class
+main\br\com\devdojo\maratonaJsf\bean\request\TesteRequestBean.class

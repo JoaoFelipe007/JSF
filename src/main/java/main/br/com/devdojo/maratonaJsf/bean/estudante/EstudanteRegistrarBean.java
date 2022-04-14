@@ -11,6 +11,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import javax.el.LambdaExpression;
+import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 import main.br.com.devdojo.maratonaJsf.model.Estudante;
@@ -28,8 +30,17 @@ public class EstudanteRegistrarBean implements Serializable {
     private List<String> nomesLista = asList("Joao", "Rainne", "JH");
     private Set<String> nomesSet = new HashSet<>(asList("Cassio ", "Willian ", "Renato Augusto "));
     private Map<String, String> nomesMap = new HashMap<>();
-    private boolean mostrarNotas;
+    private boolean mostrarNotaas;
+    private boolean mostrarTexto;
+    private boolean mostrarLink;
 
+    public void calcularQuadrado(LambdaExpression le, long value){
+    long result =(long)le.invoke(FacesContext.getCurrentInstance().getELContext(),value);
+        System.out.println(result);
+    }
+    
+    
+    
     {
         nomesMap.put(" Homem aranha", "Força de Vontade");
         nomesMap.put(" Capitão America", "Fidelidade");
@@ -56,28 +67,38 @@ public class EstudanteRegistrarBean implements Serializable {
         return "Meu nome é " + param;
     }
 
-    public String exibirNotas() {
-        this.mostrarNotas = true;
-        System.out.println(mostrarNotas);
-        return "index";
+    public void exibirNotas() {
+        this.mostrarNotaas = true;
     }
 
-    public String esconderNotas() {
-        this.mostrarNotas = false;
-        System.out.println(mostrarNotas);
-        return "index";
+    public void esconderNotas() {
+        this.mostrarNotaas = false;
+    }
+    public void exibirTexto() {
+        this.mostrarTexto = true;
+    }
+
+    public void esconderTexto() {
+        this.mostrarTexto = false;
+    }
+    public void exibirLink() {
+        this.mostrarLink = true;
+    }
+
+    public void esconderLink() {
+        this.mostrarLink = false;
     }
 
     public Map<String, String> getNomesMap() {
         return nomesMap;
     }
 
-    public boolean isMostrarNotas() {
-        return mostrarNotas;
+    public boolean isMostrarNotaas() {
+        return mostrarNotaas;
     }
 
-    public void setMostrarNotas(boolean mostrarNotas) {
-        this.mostrarNotas = mostrarNotas;
+    public void setMostrarNotaas(boolean mostrarNotaas) {
+        this.mostrarNotaas = mostrarNotaas;
     }
 
     public void setNomesMap(Map<String, String> nomesMap) {
@@ -120,4 +141,21 @@ public class EstudanteRegistrarBean implements Serializable {
         this.estudante = estudante;
     }
 
+    public boolean isMostrarTexto() {
+        return mostrarTexto;
+    }
+
+    public void setMostrarTexto(boolean mostrarTexto) {
+        this.mostrarTexto = mostrarTexto;
+    }
+
+    public boolean isMostrarLink() {
+        return mostrarLink;
+    }
+
+    public void setMostrarLink(boolean mostrarLink) {
+        this.mostrarLink = mostrarLink;
+    }
+
+    
 }

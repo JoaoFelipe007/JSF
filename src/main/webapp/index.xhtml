@@ -5,6 +5,10 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui" >
+    <h:head>
+        <title> JSF</title>
+    </h:head>
+
     <h:body> 
         <p:importEnum type="main.br.com.devdojo.maratonaJsf.model.enums.Turno" var="Turno"
                       allSuffix="ALL_ENUM_VALUES"/> 
@@ -68,17 +72,53 @@
             <h:outputLabel value="#{nome}" style="color: #{status.index mod 2 == 0 ? 'red' : 'green'}"/><br/>
         </ui:repeat>
 
-        <h:form>
-            <h:outputLabel value="#{estudanteRegistrarBean.estudante.nome}"/><br/>
-            <h:outputLabel value="#{estudanteRegistrarBean.estudante.sobrenome}" /><br/>
-            <h:outputLabel value="#{estudanteRegistrarBean.estudante.turno}" /><br/>
-            <h:commandButton value="Mostrar Notas" action="#{estudanteRegistrarBean.exibirNotas}"/><br/>
-            <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1}" rendered="#{estudanteRegistrarBean.mostrarNotas}" /><br/>
-            <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota2}" rendered="#{estudanteRegistrarBean.mostrarNotas}"/><br/>
-            <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota3}" rendered="#{estudanteRegistrarBean.mostrarNotas}"/><br/>
-            <h:outputLabel value="#{estudanteRegistrarBean.mostrarNotas}"/><br/>
-        </h:form>
+        <h:form id="form">    
+            <h:outputLabel value="#{estudanteRegistrarBean.estudante.nome}"/>
+            <h:outputLabel value="#{estudanteRegistrarBean.estudante.sobrenome}" />
+            <h:outputLabel value="#{estudanteRegistrarBean.estudante.turno}" />
+            <h:panelGrid id="estudanteGrid">
+                <h:commandButton value="Mostrar Notas" >
+                    <f:ajax render="estudanteGrid" listener="#{estudanteRegistrarBean.exibirNotas()}" />
+                </h:commandButton>
+                <h:commandButton value="Esconder Notas" >
+                    <f:ajax render="estudanteGrid"  listener="#{estudanteRegistrarBean.esconderNotas()}"/>
+                </h:commandButton>
+                <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota1}" rendered="#{estudanteRegistrarBean.mostrarNotaas}" />
+                <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota2}" rendered="#{estudanteRegistrarBean.mostrarNotaas}"/>
+                <h:outputLabel value="#{estudanteRegistrarBean.estudante.nota3}" rendered="#{estudanteRegistrarBean.mostrarNotaas}"/>
+                <h:outputLabel value="#{estudanteRegistrarBean.mostrarNotaas}"/>
+            </h:panelGrid>
+            <h:commandButton value="Mostrar Texto" >
+                <f:ajax render="pgTexto" listener="#{estudanteRegistrarBean.exibirTexto()}" />
+            </h:commandButton>
+            <h:commandButton value="Esconder Tetxo" >
+                <f:ajax render="pgTexto"  listener="#{estudanteRegistrarBean.esconderTexto()}"/>
+            </h:commandButton><br/>
+            <h:panelGroup id="pgTexto">
+                <h:outputLabel rendered="#{estudanteRegistrarBean.mostrarTexto}">
+                    Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod t<br/>
+                    empor incidunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,<br/>
+                    quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut <br/>
+                    aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate <br/>
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat <br/>
+                    cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br/> 
+                </h:outputLabel>
+            </h:panelGroup><br/>
 
+            <h:commandButton value="Mostrar Link" >
+                <f:ajax render="pgLink" listener="#{estudanteRegistrarBean.exibirLink()}" />
+            </h:commandButton>
+            <h:commandButton value="Esconder Link" >
+                <f:ajax render="pgLink"  listener="#{estudanteRegistrarBean.esconderLink()}"/>
+            </h:commandButton><br/>
+
+            <h:panelGroup id="pgLink">
+                <ui:fragment id="fragmenteId" rendered="#{estudanteRegistrarBean.mostrarLink}">
+                    <a href="https://www.youtube.com" target="_blank">Clique Aqui para ir para o youTube</a>
+                </ui:fragment>
+            </h:panelGroup>  
+
+        </h:form>
     </h:body>
     <script type="text/javascript">
         function fazerMagica(magica) {

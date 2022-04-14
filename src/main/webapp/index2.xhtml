@@ -1,12 +1,49 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Pagina ao Lado</title>
     </h:head>
     <h:body>
-       Vai Corinthians
+        <c:set value="#{[1,2,3,4,5,6,7,8,9]}" var="numeroList"/>
+
+        #{(soma -> soma + num+num)(10)}<br/>
+        #{((v1,v2,v3)->v1*v2-v3)(10,20,30)}<br/>      
+        #{(x-> x*x*x)(3)}<br/>      
+        #{(quadrado=(x-> x*x));quadrado(10)}<br/>      
+
+        <form>
+            <h:commandButton value="calcularButton" actionListener="#{estudanteRegistrarBean.calcularQuadrado((x->x*x), 35)}"/>
+        </form>
+
+        <!--List-->
+        <ui:repeat value="#{['João','é','Brabo']}" var="brabo">
+            #{brabo}
+        </ui:repeat><br/>
+        <!--Set-->
+        <ui:repeat value="#{{'João','é','Brabo','Brabo'}}" var="brabo">
+            #{brabo}
+        </ui:repeat><br/>
+
+        <ui:repeat value="#{numeroList.stream().filter(v-> v>=5).toList()}" var="result">
+            #{result}
+        </ui:repeat><br/>       
+
+        #{numeroList.stream().max().get()}<br/>
+        #{numeroList.stream().sorted().sum()}<br/> 
+        #{numeroList.stream().sum()}
+        
+        <h:form>
+            <h:outputText value="#{testeRequestBean.personagemSelecionado}"/><br/>
+        <h:commandButton actionListener="#{testeRequestBean.selecionarPersonagem()}" value="selecionar Personagem"/>
+        <h:commandButton actionListener="#{testeRequestBean.selecionarPersonagem()}" value="Selecionar personagme forwoad" action="teste.xhtml"/>
+        <h:commandButton actionListener="#{testeRequestBean.selecionarPersonagem()}" value="Selecionar personagme forwoad" action="teste.xhtml"/>
+        </h:form>
     </h:body>
 </html>
 
