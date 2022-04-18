@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:metadata>
+            <f:viewAction action="#{testeConversationBean.init()}"/>
+        </f:metadata>
+        <h:form>
+            <h:outputText value="#{testeApplicationBean.categorias}"/><br/>
+            <h:outputText value="#{testeConversationBean.personagemSelecionado}"/><br/>
+            <h:commandButton actionListener="#{testeConversationBean.selecionarPersonagem()}" value="selecionar Personagem"/>
+            <h:commandButton actionListener="#{testeConversationBean.selecionarPersonagem()}" value="prox.Pagina" action="conversation2?faces-redirect=true"/>
+            <h:link outcome="conversation2.xhtml" value="Ir para a conversatoin2" rendered="#{!testeConversationBean.conversation.transient}">
+                <f:param name="cid" value="#{testeConversationBean.conversation.id}"/>
+            </h:link>
+            <h:commandButton actionListener="#{testeConversationBean.endConversation()}" value="finalizar conversação"/><br/>
+        </h:form>   
+    </h:body>
+</html>
+
