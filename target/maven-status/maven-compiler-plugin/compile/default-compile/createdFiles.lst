@@ -3,6 +3,7 @@ main\br\com\devdojo\maratonaJsf\bean\conversation\TesteConversationBean.class
 mavenproject1\JAXRSConfiguration.class
 main\br\com\devdojo\maratonaJsf\model\Estudante.class
 main\br\com\devdojo\maratonaJsf\bean\estudante\EstudanteRegistrarBean.class
+main\br\com\devdojo\maratonaJsf\bean\Flow\TesteFlowBean.class
 main\br\com\devdojo\maratonaJsf\bean\session\TesteSessionBean.class
 main\br\com\devdojo\maratonaJsf\bean\application\TesteApplicationBean.class
 main\br\com\devdojo\maratonaJsf\bean\view\TesteViewBean.class
