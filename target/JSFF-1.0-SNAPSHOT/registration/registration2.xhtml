@@ -6,14 +6,18 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        <h2> Pontot de entrada dp FlowScoped</h2>
         <h:form>
-        <h:outputLabel value="endereço"/>
-        <h:inputText value="#{testeFlowBean.endereco}"/>
-        
-        <h:commandButton value="voltar" action="registration?faces-redirect=true"/>
-        <h:commandButton value="proximo" action="registration3?faces-redirect=true"/>
-            </h:form>
+            <h2>Segunda página de registro FlowScoped</h2>
+
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Endereço"/>
+                <h:inputText value="#{testeFlowBean.endereco}"/>
+            </h:panelGrid>
+            
+            <h:commandButton value="Back" action="registration1?faces-redirect=true"/>
+            <!--<h:commandButton value="Nex t" action="registration3?faces-redirect=true"/>-->
+            <h:commandButton value="Validar pendências" action="callPendencies      "/>
+        </h:form>
     </h:body>
 </html>
 

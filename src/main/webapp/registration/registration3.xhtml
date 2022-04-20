@@ -6,21 +6,22 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        <h2> Ponto de entrada dp FlowScoped</h2>
         <h:form>
-        <h:outputLabel value="Nome:"/><br/>
-        <h:outputLabel value="#{testeFlowBean.nome}"/><br/>
-        <br/>
-        <h:outputLabel value="Sobrenome:"/><br/>
-        <h:outputLabel value="#{testeFlowBean.sobrenome}"/><br/>
-        <br/>
-        
-        <h:outputLabel value="Endereço:"/><br/>
-        <h:outputLabel value="#{testeFlowBean.endereco}"/><br/>
-        <br/>
-        
-        <h:commandButton value="Voltar" action="registration2?faces-redirect=true"/>
-                         
+            <h2>Terceira página de registro FlowScoped</h2>
+
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Nome"/>
+                <h:outputText value="#{testeFlowBean.nome}"/>
+                <h:outputLabel value="Sobrenome"/>
+                <h:outputText value="#{testeFlowBean.sobrenome}"/>
+                <h:outputLabel value="Endereco"/>
+                <h:outputText value="#{testeFlowBean.endereco}"/>
+            </h:panelGrid>
+
+            <h:commandButton value="Back" action="registration2?faces-redirect=true"/>
+            <!--<h:commandButton value="Salvar" action="exitToInicioFlow"/>-->
+            <h:commandButton value="Validar Dados" action="pendices.xhtml"/>
+            
         </h:form>
     </h:body>
 </html>
