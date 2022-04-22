@@ -13,12 +13,13 @@
 
         <flow-call id="callPendencies">
             <flow-reference>
-                <flow-id>/pendencies/pendencies.xhtml</flow-id>
+                <flow-id>pendencies</flow-id>
             </flow-reference>
             <outbound-parameter>
                 <name>userName</name>
                 <value>#{testeFlowBean.nome}</value>
             </outbound-parameter>
+            
             <outbound-parameter>
                 <name>userSurname</name>
                 <value>#{testeFlowBean.sobrenome}</value>

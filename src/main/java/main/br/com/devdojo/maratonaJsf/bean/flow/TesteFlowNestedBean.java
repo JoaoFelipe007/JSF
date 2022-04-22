@@ -5,6 +5,8 @@
 package main.br.com.devdojo.maratonaJsf.bean.flow;
 
 import java.io.Serializable;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import javax.faces.flow.FlowScoped;
 import javax.inject.Named;
 
@@ -14,9 +16,29 @@ import javax.inject.Named;
  */
 @Named
 @FlowScoped("pendencies")
-public class TesteFlowNestedBean implements Serializable{
+public class TesteFlowNestedBean implements Serializable {
+
     private String userName;
     private String userSurname;
+
+    public String validarUsuario() {
+        System.out.println("Fazendo Consulta no sersa");
+        System.out.println("Fazendo Consulta no sersa");
+
+        if (true) {
+            FacesContext context = FacesContext.getCurrentInstance();
+            context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR,
+                    "Usuario não passou nas pendencias", "Algum Detalhe util"));
+            return null;
+        }
+        return "exitToRegistration3";
+    }
+//    public String salvar(){
+//        System.out.println("Lendo dados");
+//        System.out.println("Processando Dados");
+//        System.out.println("Salvando no Banco");
+//        return;
+//    }
 
     public String getUserName() {
         return userName;
@@ -33,6 +55,5 @@ public class TesteFlowNestedBean implements Serializable{
     public void setUserSurname(String userSurname) {
         this.userSurname = userSurname;
     }
-    
-    
+
 }

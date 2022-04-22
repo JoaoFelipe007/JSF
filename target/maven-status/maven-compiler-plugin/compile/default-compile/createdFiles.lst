@@ -4,9 +4,14 @@ main\br\com\devdojo\maratonaJsf\bean\flow\TesteFlowBean.class
 main\br\com\devdojo\maratonaJsf\model\Estudante.class
 main\br\com\devdojo\maratonaJsf\bean\session\TesteSessionBean.class
 main\br\com\devdojo\maratonaJsf\bean\view\TesteViewBean.class
+main\br\com\devdojo\maratonaJsf\flowbuilder\newRegistrationFlowBuilder.class
+main\br\com\devdojo\maratonaJsf\flowbuilder\newPendednciesFlowBuilder.class
+main\br\com\devdojo\maratonaJsf\bean\flowbuilder\TesteFlowBuilderNestedBean.class
 main\br\com\devdojo\maratonaJsf\bean\request\TesteRequestBean.class
+main\br\com\devdojo\maratonaJsf\bean\dependent\TesteDependentBean.class
 mavenproject1\JAXRSConfiguration.class
 main\br\com\devdojo\maratonaJsf\bean\estudante\EstudanteRegistrarBean.class
 main\br\com\devdojo\maratonaJsf\bean\application\TesteApplicationBean.class
 resources\JavaEE8Resource.class
 main\br\com\devdojo\maratonaJsf\bean\flow\TesteFlowNestedBean.class
+main\br\com\devdojo\maratonaJsf\bean\flowbuilder\TesteFlowBuilderBean.class
