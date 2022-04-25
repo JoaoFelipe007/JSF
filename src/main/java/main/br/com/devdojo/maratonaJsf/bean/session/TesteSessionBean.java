@@ -13,6 +13,7 @@ import javax.annotation.PostConstruct;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
+import main.br.com.devdojo.maratonaJsf.model.Estudante;
 
 /**
  *
@@ -25,10 +26,17 @@ public class TesteSessionBean implements Serializable{
     
     private List<String> personagens;
     private List<String> personagemSelecionado = new ArrayList<>();
+    private Estudante estudante;
 
     @PostConstruct
     public void init(){
         personagens = asList("Sentinela", "Lobo", "Vigia");
+        logar();
+    }
+    
+    public void logar(){
+    //  Fez consulta, verificou  se esta ok
+    estudante = new Estudante();
     }
     
     public String logout(){
@@ -46,6 +54,12 @@ public class TesteSessionBean implements Serializable{
         return personagemSelecionado;
     }
 
+    public Estudante getEstudante() {
+        return estudante;
+    }
+
+    
+    
     public void setPersonagemSelecionado(List<String> personagemSelecionado) {
         this.personagemSelecionado = personagemSelecionado;
     }

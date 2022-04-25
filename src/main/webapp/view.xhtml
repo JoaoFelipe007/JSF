@@ -8,7 +8,12 @@
     <h:body>
         <h:form>
             <h:outputText value="#{testeApplicationBean.categorias}"/><br/>
-            <h:outputText value="#{testeViewBean.personagemSelecionado}"/><br/>
+
+            <h:outputText value="Estudante Logado: #{testeSessionBean.estudante.nome}"/><br/>            
+
+            <h:outputText value="#{testeViewBean.personagemSelecionado}"/><br/>            
+            <h:outputText value="Depenedent: #{testeViewBean.dependentBean.personagemSelecionado}"/><br/>
+
             <h:commandButton actionListener="#{testeViewBean.selecionarPersonagem()}" value="selecionar Personagem"/>
             <h:commandButton actionListener="#{testeViewBean.selecionarPersonagem()}" value="prox.Pagina" action="view2?faces-redirect=true"/>
         </h:form>   

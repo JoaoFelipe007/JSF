@@ -1,10 +1,12 @@
 main\br\com\devdojo\maratonaJsf\model\enums\Turno.class
 main\br\com\devdojo\maratonaJsf\bean\conversation\TesteConversationBean.class
+main\br\com\devdojo\maratonaJsf\bean\loginBean\LoginBean.class
 main\br\com\devdojo\maratonaJsf\bean\flow\TesteFlowBean.class
 main\br\com\devdojo\maratonaJsf\model\Estudante.class
 main\br\com\devdojo\maratonaJsf\bean\session\TesteSessionBean.class
 main\br\com\devdojo\maratonaJsf\bean\view\TesteViewBean.class
 main\br\com\devdojo\maratonaJsf\flowbuilder\newRegistrationFlowBuilder.class
+main\br\com\devdojo\maratonaJsf\filter\LoginFilter.class
 main\br\com\devdojo\maratonaJsf\flowbuilder\newPendednciesFlowBuilder.class
 main\br\com\devdojo\maratonaJsf\bean\flowbuilder\TesteFlowBuilderNestedBean.class
 main\br\com\devdojo\maratonaJsf\bean\request\TesteRequestBean.class
