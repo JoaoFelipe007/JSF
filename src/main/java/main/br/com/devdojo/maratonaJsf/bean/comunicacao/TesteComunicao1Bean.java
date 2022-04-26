@@ -16,7 +16,7 @@ import javax.inject.Named;
 @Named
 @ViewScoped
 public class TesteComunicao1Bean implements Serializable{
-    private String Nome;
+    private String nome;
     private String sobrenome;
     
     public void imprimirAtributos(){
@@ -24,17 +24,18 @@ public class TesteComunicao1Bean implements Serializable{
         System.out.println(initParameter);
     }
 
-    public void save(){
-        System.out.println("nome");
-        System.out.println("");
+    public String save(){
+        System.out.println(nome);
+        System.out.println(sobrenome);
+        return "comunicacao2?faces-redirect=true&nome="+nome+"&sobrenome="+sobrenome;
     }
     
     public String getNome() {
-        return Nome;
+        return nome;
     }
 
-    public void setNome(String Nome) {
-        this.Nome = Nome;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getSobrenome() {

@@ -16,11 +16,31 @@
                 <h:outputText value="#{facesContext.externalContext.getInitParameter('images.location')}"/>
                 <h:commandButton value="imprimir" actionListener="#{testeComunicao1Bean.imprimirAtributos()}"/>
             </h:panelGrid>
-        </h:form>           <!--
+        </h:form>  
+        <h:form>
             <h:panelGrid columns="1">
-                <h:outputText value=""/>
+                <h:outputText value="Nome"/>
+                <h:outputText value="#{testeComunicao1Bean.nome}"/>
+                <h:inputText value="#{testeComunicao1Bean.nome}"/><br/>
+                <h:outputText value="Sobrenome"/>
+                <h:outputText value="#{testeComunicao1Bean.sobrenome}"/>
+                <h:inputText value="#{testeComunicao1Bean.sobrenome}"/>
+                <h:button value="save" outcome="comunicacao2">
+                    <f:param name="nome" value="Rainne"/>
+                    <f:param name="sobrenome" value="Neves Souza"/>
+                </h:button>
+                <h:link value="next" outcome="comunicacao2">
+                    <f:param name="nome" value="Rainne"/>
+                    <f:param name="sobrenome" value="Neves Souza"/> 
+                </h:link>
+
+                <h:link value="next3" outcome="comunicacao3">
+                    <f:param name="nome" value="Raii"/>
+                    <f:param name="sobrenome" value="souza"/>
+                </h:link>
+            
             </h:panelGrid>
-        </h:form>           -->
+        </h:form>           
     </h:body>
 </html>
 

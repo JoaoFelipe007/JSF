@@ -23,10 +23,17 @@
             <version>${jakartaee}</version>
             <scope>provided</scope>
         </dependency>
+        
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
             <version>11.0.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.omnifaces/omnifaces -->
+        <dependency>
+            <groupId>org.omnifaces</groupId>
+            <artifactId>omnifaces</artifactId>
+            <version>3.13</version>
         </dependency>
     </dependencies>
     
@@ -73,8 +80,6 @@
                                     <type>jar</type>
                                 </artifactItem>
                             </artifactItems>
-                            <dependencies>
-                            </dependencies>
                         </configuration>
                     </execution>
                 </executions>
