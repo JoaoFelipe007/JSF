@@ -19,16 +19,16 @@
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>faces/comunicacao.xhtml</welcome-file>
+        <welcome-file>faces/login.xhtml</welcome-file>
     </welcome-file-list>
     <filter>
         <filter-name>LoginFilter</filter-name>
         <filter-class>main.br.com.devdojo.maratonaJsf.filter.LoginFilter</filter-class>
     </filter>
-<!--    <filter>
+    <filter-mapping>
         <filter-name>LoginFilter</filter-name>
-        <url-pattern>/restricted</url-pattern>
-    </filter>-->
+        <url-pattern>/faces/restricted/*</url-pattern>
+    </filter-mapping>
     <context-param>
         <param-name>images.location</param-name>
         <param-value>C:/var</param-value>
