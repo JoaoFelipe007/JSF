@@ -18,6 +18,16 @@ public class Estudante {
     private Turno turno = Turno.MATUTINO;
     private double nota3 =30;
 
+    public Estudante() {
+    }
+
+    public Estudante(String nome, String sobrenome, double nota1) {
+        this.nome= nome;
+        this.sobrenome= sobrenome;
+        this.nota1= nota1;
+    }
+
+    
     public String getNome() {
         return nome;
     }

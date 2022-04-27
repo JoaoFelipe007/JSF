@@ -5,7 +5,8 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:of="http://omnifaces.org/functions">
     <h:head>
         <title>Facelet Title</title>
     </h:head>
@@ -37,8 +38,9 @@
                 <h:link value="next3" outcome="comunicacao3">
                     <f:param name="nome" value="Raii"/>
                     <f:param name="sobrenome" value="souza"/>
+                    <f:param name="data" value="#{of:formatDate(testeComunicao1Bean.data,'dd-MM-yyyy')}"/>
                 </h:link>
-            
+
             </h:panelGrid>
         </h:form>           
     </h:body>

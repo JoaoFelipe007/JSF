@@ -5,7 +5,11 @@
 package main.br.com.devdojo.maratonaJsf.bean.comunicacao;
 
 import java.io.Serializable;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.annotation.PostConstruct;
+import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -17,16 +21,19 @@ import org.omnifaces.cdi.Param;
  */
 @Named
 @ViewScoped
-public class TesteComunicao3Bean implements Serializable{
+public class TesteComunicao3Bean implements Serializable {
+
     private String nome;
     private String sobrenome;
-
-     public void init(){
-        System.out.println(nome);
-        System.out.println(sobrenome);
+    private Date data;
+    
+    public void init() throws ParseException {
+//        if(!FacesContext.getCurrentInstance().isPostback()){
+            System.out.println(nome);
+            System.out.println(sobrenome);        
+           
     }
-    
-    
+
     public String getNome() {
         return nome;
     }
@@ -42,6 +49,15 @@ public class TesteComunicao3Bean implements Serializable{
     public void setSobrenome(String sobrenome) {
         this.sobrenome = sobrenome;
     }
+
+    public Date getData() {
+        return data;
+    }
+
+    public void setData(Date data) {
+        this.data = data;
+    }
+
 
     
 }
