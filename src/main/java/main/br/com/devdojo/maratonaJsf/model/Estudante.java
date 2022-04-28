@@ -4,6 +4,9 @@
  */
 package main.br.com.devdojo.maratonaJsf.model;
 
+import java.util.Arrays;
+import static java.util.Arrays.asList;
+import java.util.List;
 import main.br.com.devdojo.maratonaJsf.model.enums.Turno;
 
 /**
@@ -27,7 +30,11 @@ public class Estudante {
         this.nota1= nota1;
     }
 
-    
+    public static List<Estudante> estudanteList(){
+    return asList(new Estudante ("João","de Paula",10),
+      new Estudante ("João","Henrique",10),
+      new Estudante ("Rainne","Souza",10));
+    }
     public String getNome() {
         return nome;
     }

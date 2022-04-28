@@ -1,3 +1,4 @@
+main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicacao8Bean.class
 main\br\com\devdojo\maratonaJsf\bean\flowbuilder\TesteFlowBuilderNestedBean.class
 main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicao4Bean.class
 mavenproject1\JAXRSConfiguration.class
@@ -6,6 +7,7 @@ main\br\com\devdojo\maratonaJsf\bean\estudante\EstudanteRegistrarBean.class
 main\br\com\devdojo\maratonaJsf\bean\application\TesteApplicationBean.class
 resources\JavaEE8Resource.class
 main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicao1Bean.class
+main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicao6Bean.class
 main\br\com\devdojo\maratonaJsf\bean\flowbuilder\TesteFlowBuilderBean.class
 main\br\com\devdojo\maratonaJsf\model\enums\Turno.class
 main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicao3Bean.class
@@ -15,6 +17,7 @@ main\br\com\devdojo\maratonaJsf\bean\flow\TesteFlowBean.class
 main\br\com\devdojo\maratonaJsf\model\Estudante.class
 main\br\com\devdojo\maratonaJsf\bean\session\TesteSessionBean.class
 main\br\com\devdojo\maratonaJsf\bean\view\TesteViewBean.class
+main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicacao9Bean.class
 main\br\com\devdojo\maratonaJsf\flowbuilder\newRegistrationFlowBuilder.class
 main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicao5Bean.class
 main\br\com\devdojo\maratonaJsf\filter\LoginFilter.class
@@ -23,3 +26,4 @@ main\br\com\devdojo\maratonaJsf\bean\request\TesteRequestBean.class
 main\br\com\devdojo\maratonaJsf\bean\dependent\TesteDependentBean.class
 main\br\com\devdojo\maratonaJsf\bean\flow\TesteFlowNestedBean.class
 main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicao2Bean.class
+main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicao7Bean.class
