@@ -4,6 +4,7 @@
  */
 package main.br.com.devdojo.maratonaJsf.model;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import static java.util.Arrays.asList;
 import java.util.List;
@@ -31,9 +32,9 @@ public class Estudante {
     }
 
     public static List<Estudante> estudanteList(){
-    return asList(new Estudante ("João","de Paula",10),
+    return new ArrayList<>(asList(new Estudante ("João","de Paula",10),
       new Estudante ("João","Henrique",10),
-      new Estudante ("Rainne","Souza",10));
+      new Estudante ("Rainne","Souza",10)));
     }
     public String getNome() {
         return nome;
