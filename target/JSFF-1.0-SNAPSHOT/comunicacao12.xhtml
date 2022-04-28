@@ -15,8 +15,17 @@
     </f:metadata>
     
     <h:body>
+        <H1>Comunicação 12</H1>
+        <p:messages>
+            <p:autoUpdate/>
+        </p:messages>
         <h:outputText value="#{testeComunicacao12Bean.estudante.nome}"/><br/>
         <h:outputText value="#{testeComunicacao12Bean.estudante.sobrenome}"/>
+        <h:form>
+            <h:inputText value="#{testeComunicacao12Bean.estudante2.nome}" converter="javax.faces.Number" immediate="true"/>
+            <h:inputText value="#{testeComunicacao12Bean.estudante2.sobrenome}" converter="javax.faces.BigDecimal"/>
+            <h:commandButton value="Voltar" action="#{testeComunicacao12Bean.voltar()}" immediate="true"/>
+        </h:form>
     </h:body>
 </html>
 
