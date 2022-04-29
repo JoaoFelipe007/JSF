@@ -5,6 +5,9 @@
 package main.br.com.devdojo.maratonaJsf.bean.loginBean;
 
 import java.io.Serializable;
+import static java.util.Arrays.asList;
+import java.util.List;
+import java.util.Locale;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
@@ -22,10 +25,14 @@ public class LoginBean implements Serializable{
     private String nome;
     private String senha;
     private Estudante estudante;
-
+    private List<Locale> localeList = asList(new Locale("en"), new Locale("pt"));
+    private String language;
+    private int qtdMessages;
+    
     public String login(){
         if(nome.equals("w")&& senha.equals("1")){
             estudante = new Estudante();
+            qtdMessages++;
             return "/restricted/iniciosistema.xhtml?faces-redirect=true";
         }
         FacesContext context = FacesContext.getCurrentInstance();
@@ -62,6 +69,32 @@ public class LoginBean implements Serializable{
     public void setEstudante(Estudante estudante) {
         this.estudante = estudante;
     }
+
+    public List<Locale> getLocaleList() {
+        return localeList;
+    }
+
+    public void setLocaleList(List<Locale> localeList) {
+        this.localeList = localeList;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    public int getQtdMessages() {
+        return qtdMessages;
+    }
+
+    public void setQtdMessages(int qtdMessages) {
+        this.qtdMessages = qtdMessages;
+    }
+
+        
     
     
 }

@@ -21,6 +21,9 @@
                 <h:outputText value ="senha"/>
                 <h:inputSecret value="#{loginBean.senha}" required="true" requiredMessage="Digite o nome"/>
                 
+                <h:selectOneMenu value="#{loginBean.language}">
+                    <f:selectItems value="#{loginBean.localeList}" var="locale" itemValue="#{locale.language}" itemLabel="#{locale.displayLanguage}"/>
+                </h:selectOneMenu> 
                 <h:commandButton value="Fazer Login" action="#{loginBean.login()}"/>
                 
             </h:panelGrid>

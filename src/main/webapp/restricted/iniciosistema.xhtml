@@ -1,13 +1,24 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Facelet Title</title>
     </h:head>
+    <f:view locale="#{loginBean.language}"/>
+    <h:outputText value="#{loginBean.language}"/>
     <h:body>
-        <h2>Usuario Logado #{loginBean.estudante.nome}</h2>
         <h:form>
+            <h1>#{m.userLogged} #{loginBean.estudante.nome}</h1>
+            <h:outputFormat value="#{m.userLogged}">
+                <f:param value="#{loginBean.nome}"/>
+                <f:param value="#{loginBean.sobrenome}"/>
+            </h:outputFormat>
+            <br/>
+            <h:outputFormat value="#{m.alert}">
+                <f:param value="#{loginBean.qtdMessages}"/>
+            </h:outputFormat>
             <h:commandButton value="sair" action="#{loginBean.logout()}"/>
         </h:form>
     </h:body>

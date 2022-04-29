@@ -4,6 +4,12 @@
         <param-name>javax.faces.PROJECT_STAGE</param-name>
         <param-value>Development</param-value>
     </context-param>
+    
+    <context-param>
+        <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+        <param-value>resources.messages</param-value>
+    </context-param>
+
     <servlet>
         <servlet-name>Faces Servlet</servlet-name>
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
@@ -19,7 +25,7 @@
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>faces/comunicacao11.xhtml</welcome-file>
+        <welcome-file>faces/validator.xhtml</welcome-file>
     </welcome-file-list>
     <filter>
         <filter-name>LoginFilter</filter-name>
