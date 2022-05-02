@@ -4,17 +4,20 @@
  */
 package main.br.com.devdojo.maratonaJsf.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import static java.util.Arrays.asList;
 import java.util.List;
+import java.util.Objects;
 import main.br.com.devdojo.maratonaJsf.model.enums.Turno;
 
 /**
  *
  * @author Gestão Tech
  */
-public class Estudante {
+public class Estudante implements Serializable{
+    private Integer id;
     private String nome ="João Felipe";
     private String sobrenome ="de Paula Silva";
     private double nota1 =10;
@@ -24,7 +27,7 @@ public class Estudante {
     private String email;
     
     
-    public Estudante() {
+    public Estudante () {
     }
 
     public Estudante(String nome, String sobrenome, double nota1) {
@@ -32,11 +35,18 @@ public class Estudante {
         this.sobrenome= sobrenome;
         this.nota1= nota1;
     }
+    public Estudante(Integer id,String nome, String sobrenome, double nota1) {
+        this.id = id;
+        this.nome= nome;
+        this.sobrenome= sobrenome;
+        this.nota1= nota1;
+    }
 
     public static List<Estudante> estudanteList(){
-    return new ArrayList<>(asList(new Estudante ("João","de Paula",10),
-      new Estudante ("João","Henrique",10),
-      new Estudante ("Rainne","Souza",10)));
+    return new ArrayList<>(asList(new Estudante (1,"João","de Paula",10),
+      new Estudante (2,"João","Henrique",10),
+      new Estudante (2,"João","Henrique",10),
+      new Estudante (3,"Rainne","Souza",10)));
     }
     public String getNome() {
         return nome;
@@ -92,6 +102,39 @@ public class Estudante {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 89 * hash + Objects.hashCode(this.id);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Estudante other = (Estudante) obj;
+        if (!Objects.equals(this.id, other.id)) {
+            return false;
+        }
+        return true;
     }
     
     

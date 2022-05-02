@@ -1,6 +1,8 @@
 main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicacao10Bean.class
 main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicacao8Bean.class
+main\br\com\devdojo\maratonaJsf\bean\datatable\DataTableTesteBean.class
 main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicacao12Bean.class
+main\br\com\devdojo\maratonaJsf\converts\EstudanteConverter.class
 main\br\com\devdojo\maratonaJsf\bean\flowbuilder\TesteFlowBuilderNestedBean.class
 main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicao4Bean.class
 main\br\com\devdojo\maratonaJsf\util\ApplicationMapUtil.class
@@ -12,14 +14,17 @@ resources\JavaEE8Resource.class
 main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicao1Bean.class
 main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicao6Bean.class
 main\br\com\devdojo\maratonaJsf\bean\flowbuilder\TesteFlowBuilderBean.class
+main\br\com\devdojo\maratonaJsf\bean\validation\ValidationTesteBean.class
 main\br\com\devdojo\maratonaJsf\model\enums\Turno.class
 main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicao3Bean.class
 main\br\com\devdojo\maratonaJsf\bean\conversation\TesteConversationBean.class
+main\br\com\devdojo\maratonaJsf\bean\converter\ConverterTesteBean.class
 main\br\com\devdojo\maratonaJsf\bean\loginBean\LoginBean.class
 main\br\com\devdojo\maratonaJsf\bean\flow\TesteFlowBean.class
 main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicacao11Bean.class
 main\br\com\devdojo\maratonaJsf\model\Estudante.class
 main\br\com\devdojo\maratonaJsf\bean\session\TesteSessionBean.class
+main\br\com\devdojo\maratonaJsf\validators\Validators.class
 main\br\com\devdojo\maratonaJsf\bean\view\TesteViewBean.class
 main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicacao9Bean.class
 main\br\com\devdojo\maratonaJsf\flowbuilder\newRegistrationFlowBuilder.class

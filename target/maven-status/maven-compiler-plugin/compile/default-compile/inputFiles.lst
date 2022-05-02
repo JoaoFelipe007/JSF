@@ -24,9 +24,12 @@ C:\Users\Gestão Tech\Desktop\Joao\JSF\JSFF\src\main\java\main\br\com\devdojo\mar
 C:\Users\Gestão Tech\Desktop\Joao\JSF\JSFF\src\main\java\main\br\com\devdojo\maratonaJsf\bean\flowbuilder\TesteFlowBuilderNestedBean.java
 C:\Users\Gestão Tech\Desktop\Joao\JSF\JSFF\src\main\java\main\br\com\devdojo\maratonaJsf\validators\DuplicateEmailValidator.java
 C:\Users\Gestão Tech\Desktop\Joao\JSF\JSFF\src\main\java\main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicao7Bean.java
+C:\Users\Gestão Tech\Desktop\Joao\JSF\JSFF\src\main\java\main\br\com\devdojo\maratonaJsf\bean\datatable\DataTableTesteBean.java
+C:\Users\Gestão Tech\Desktop\Joao\JSF\JSFF\src\main\java\main\br\com\devdojo\maratonaJsf\bean\converter\ConverterTesteBean.java
 C:\Users\Gestão Tech\Desktop\Joao\JSF\JSFF\src\main\java\resources\JavaEE8Resource.java
 C:\Users\Gestão Tech\Desktop\Joao\JSF\JSFF\src\main\java\main\br\com\devdojo\maratonaJsf\bean\loginBean\LoginBean.java
 C:\Users\Gestão Tech\Desktop\Joao\JSF\JSFF\src\main\java\main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicacao10Bean.java
+C:\Users\Gestão Tech\Desktop\Joao\JSF\JSFF\src\main\java\main\br\com\devdojo\maratonaJsf\bean\validation\ValidationTesteBean.java
 C:\Users\Gestão Tech\Desktop\Joao\JSF\JSFF\src\main\java\main\br\com\devdojo\maratonaJsf\model\Estudante.java
 C:\Users\Gestão Tech\Desktop\Joao\JSF\JSFF\src\main\java\main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicao6Bean.java
 C:\Users\Gestão Tech\Desktop\Joao\JSF\JSFF\src\main\java\main\br\com\devdojo\maratonaJsf\filter\LoginFilter.java
@@ -34,3 +37,4 @@ C:\Users\Gestão Tech\Desktop\Joao\JSF\JSFF\src\main\java\main\br\com\devdojo\mar
 C:\Users\Gestão Tech\Desktop\Joao\JSF\JSFF\src\main\java\main\br\com\devdojo\maratonaJsf\bean\estudante\EstudanteRegistrarBean.java
 C:\Users\Gestão Tech\Desktop\Joao\JSF\JSFF\src\main\java\main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicacao8Bean.java
 C:\Users\Gestão Tech\Desktop\Joao\JSF\JSFF\src\main\java\main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicao4Bean.java
+C:\Users\Gestão Tech\Desktop\Joao\JSF\JSFF\src\main\java\main\br\com\devdojo\maratonaJsf\converts\EstudanteConverter.java
