@@ -16,7 +16,7 @@ import main.br.com.devdojo.maratonaJsf.model.enums.Turno;
  *
  * @author Gestão Tech
  */
-public class Estudante implements Serializable{
+    public class Estudante implements Serializable{
     private Integer id;
     private String nome ="João Felipe";
     private String sobrenome ="de Paula Silva";

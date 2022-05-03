@@ -10,6 +10,9 @@
     <h:head>
         <title>Facelet Title</title>
     </h:head>
+    <f:metadata>
+        <f:viewAction action="#{dataTableTesteBean.init()}"/>
+    </f:metadata>
     <h:body>
         <H1>Validation 1</H1>
         <p:messages>
@@ -34,6 +37,7 @@
                     <h:outputText value="#{estudante.email}"/>
                 </h:column>
             </h:dataTable>
+
             <h:dataTable value="#{dataTableTesteBean.estudanteSet}" var="estudante">
                 <h:column>
                     <f:facet name="header">Nome</f:facet>
@@ -52,6 +56,7 @@
                     <h:outputText value="#{estudante.email}"/>
                 </h:column>
             </h:dataTable>
+
             <h:dataTable value="#{dataTableTesteBean.estudanteLinkedList}" var="estudante">
                 <h:column>
                     <f:facet name="header">Nome</f:facet>
@@ -69,6 +74,28 @@
                     <f:facet name="header">Email</f:facet>
                     <h:outputText value="#{estudante.email}"/>
                 </h:column>
+            </h:dataTable>
+            <h:dataTable value="#{dataTableTesteBean.estudanteMap.values()}" var="estudante">
+                <h:column>
+                    <f:facet name="header">Nome</f:facet>
+                    <h:outputText value="#{estudante.nome}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Sobrenome</f:facet>
+                    <h:outputText value="#{estudante.sobrenome}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Turno</f:facet>
+                    <h:outputText value="#{estudante.turno}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Email</f:facet>
+                    <h:outputText value="#{estudante.email}"/>
+                </h:column>
+            </h:dataTable>
+            <h:dataTable value="#{dataTableTesteBean.estudanteMap.keySet()}" var="estudante">
+                <f:facet name="header">Chave</f:facet>
+                <h:outputText value="#{string}"/>
             </h:dataTable>
         </h:form>
     </h:body>

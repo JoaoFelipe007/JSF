@@ -28,9 +28,10 @@ public class DataTableTesteBean implements Serializable{
     private Map<String,Estudante> estudanteMap= new HashMap<>();
     
     public void init(){
-        estudanteMap.put("Lista", estudanteList);
-        estudanteMap.keySet();
-     }
+        estudanteMap.put("Estudante 1",new Estudante (1,"João","de Paula",10));
+        estudanteMap.put("Estudante 2",new Estudante (2,"João","Henrique",10));
+        estudanteMap.put("Estudante 3",new Estudante (3,"Rainne","Souza",10));
+    }
     
     public List<Estudante> getEstudanteList() {
         return estudanteList;
@@ -56,5 +57,13 @@ public class DataTableTesteBean implements Serializable{
         this.estudanteLinkedList = estudanteLinkedList;
     }
 
+    public Map<String, Estudante> getEstudanteMap() {
+        return estudanteMap;
+    }
+
+    public void setEstudanteMap(Map<String, Estudante> estudanteMap) {
+        this.estudanteMap = estudanteMap;
+    }
+    
     
 }
