@@ -14,6 +14,7 @@
         <f:viewAction action="#{dataTableTesteBean.init()}"/>
     </f:metadata>
     <h:body>
+        <p:importEnum type="main.br.com.devdojo.maratonaJsf.model.enums.Turno" var="Turno" allSuffix="ALL_ENUM_VALUES"/>
         <H1>Validation 1</H1>
         <p:messages>
             <p:autoUpdate/>
@@ -27,7 +28,8 @@
                     <f:facet name="header">
                         <h:commandLink actionListener="#{dataTableTesteBean.orderByNome('desc')}">Nome Asc</h:commandLink>
                     </f:facet>
-                    <h:outputText value="#{estudante.nome}"/>
+                    <h:outputText value="#{estudante.nome}" rendered="#{not estudante.editing}"/>
+                    <h:inputText value="#{estudante.nome}" rendered="#{estudante.editing}"/>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
@@ -40,13 +42,27 @@
                 </h:column>
                 <h:column>
                     <f:facet name="header">Turno</f:facet>
-                    <h:outputText value="#{estudante.turno}"/>
+                    <h:outputText value="#{estudante.turno}" rendered="#{not estudante.editing}"/>
+                    <h:selectOneMenu value="#{estudante.turno}" rendered="#{estudante.editing}">
+                        <f:selectItems value="#{Turno.ALL_ENUM_VALUES}" var="turno" itemValue="#{turno}" itemLabel="#{turno}"/>
+                    </h:selectOneMenu>
                 </h:column>
+                
                 <h:column>
-                    <f:facet name="header">Email</f:facet>
-                    <h:outputText value="#{estudante.email}"/>
+                    <f:facet name="header"></f:facet>
+                    <h:commandLink actionListener="#{dataTableTesteBean.remover(estudante)}" rendered="#{not estudante.editing}">
+                    <h:outputText value="Remover"/>
+                    </h:commandLink>
+                </h:column>
+             
+                <h:column>
+                    <f:facet name="header"></f:facet>
+                    <h:commandLink actionListener="#{dataTableTesteBean.edit(estudante)}" rendered="#{not estudante.editing}">
+                    <h:outputText value="Editar"/>
+                    </h:commandLink>
                 </h:column>
             </h:dataTable>
+            <h:commandButton value="save" actionListener="#{dataTableTesteBean.save}"/>
 
             <h:dataTable value="#{dataTableTesteBean.estudanteSet}" var="estudante">
                 <h:column>

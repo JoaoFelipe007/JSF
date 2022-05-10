@@ -2,52 +2,57 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package main.br.com.devdojo.maratonaJsf.model;
+    package main.br.com.devdojo.maratonaJsf.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Arrays;
 import static java.util.Arrays.asList;
 import java.util.List;
 import java.util.Objects;
+import javax.persistence.Transient;
 import main.br.com.devdojo.maratonaJsf.model.enums.Turno;
 
 /**
  *
  * @author Gestão Tech
  */
-    public class Estudante implements Serializable{
+public class Estudante implements Serializable {
+
     private Integer id;
-    private String nome ="João Felipe";
-    private String sobrenome ="de Paula Silva";
-    private double nota1 =10;
+    private String nome = "João Felipe";
+    private String sobrenome = "de Paula Silva";
+    private double nota1 = 10;
     private double nota2;
     private Turno turno = Turno.MATUTINO;
-    private double nota3 =30;
+    private double nota3 = 30;
     private String email;
-    
-    
-    public Estudante () {
+   
+    @Transient
+    private transient boolean editing;
+
+    public Estudante() {
     }
 
     public Estudante(String nome, String sobrenome, double nota1) {
-        this.nome= nome;
-        this.sobrenome= sobrenome;
-        this.nota1= nota1;
-    }
-    public Estudante(Integer id,String nome, String sobrenome, double nota1) {
-        this.id = id;
-        this.nome= nome;
-        this.sobrenome= sobrenome;
-        this.nota1= nota1;
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.nota1 = nota1;
     }
 
-    public static List<Estudante> estudanteList(){
-    return new ArrayList<>(asList(new Estudante (1,"João","de Paula",10),
-      new Estudante (2,"João","Henrique",10),
-      new Estudante (2,"João","Henrique",10),
-      new Estudante (3,"Rainne","Souza",10)));
+    public Estudante(Integer id, String nome, String sobrenome, double nota1) {
+        this.id = id;
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.nota1 = nota1;
     }
+
+    public static List<Estudante> estudanteList() {
+        return new ArrayList<>(asList(new Estudante(1, "João", "de Paula", 10),
+                new Estudante(2, "João", "Henrique", 10),
+                new Estudante(2, "João", "Henrique", 10),
+                new Estudante(3, "Rainne", "Souza", 10)));
+    }
+
     public String getNome() {
         return nome;
     }
@@ -74,6 +79,14 @@ import main.br.com.devdojo.maratonaJsf.model.enums.Turno;
 
     public double getNota2() {
         return nota2;
+    }
+
+    public boolean isEditing() {
+        return editing;
+    }
+
+    public void setEditing(boolean editing) {
+        this.editing = editing;
     }
 
     public void setNota2(double nota2) {
@@ -120,6 +133,13 @@ import main.br.com.devdojo.maratonaJsf.model.enums.Turno;
     }
 
     @Override
+    public String toString() {
+        return "Estudante{" + "nome=" + nome + ", sobrenome=" + sobrenome + ", turno=" + turno + ", email=" + email + '}';
+    }
+
+    
+    
+    @Override
     public boolean equals(Object obj) {
         if (this == obj) {
             return true;
@@ -136,7 +156,5 @@ import main.br.com.devdojo.maratonaJsf.model.enums.Turno;
         }
         return true;
     }
-    
-    
-    
+
 }
