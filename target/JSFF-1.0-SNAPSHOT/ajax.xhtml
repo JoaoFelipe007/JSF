@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:o="http://omnifaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h1>Ajax 1</h1>
+        <h:outputText value="#{ajaxTesteBean.nome}" id="outside"/>
+        <h:form id="form">
+            <h:panelGrid>
+                <!--@form @this @none-->
+                <h:inputText value="#{ajaxTesteBean.nome}" id ="nome"/>
+                <h:inputText value="#{ajaxTesteBean.sobrenome}" id ="sobrenome"/>
+                <h:commandButton value="Enviar">
+                    <f:ajax execute="@form" listener="#{ajaxTesteBean.toUpperCase2()}" render="@form  form2:sobrenomeUp2  outside"/>
+                </h:commandButton>
+                <h:outputText value="#{ajaxTesteBean.nome}" id ="nomeUp"/>
+                <h:outputText value="#{ajaxTesteBean.sobrenome}" id ="sobrenomeUp"/>
+            </h:panelGrid>
+        </h:form>
+        <h:form id="form2">
+            <h:panelGrid columns="1">
+                <h:outputText value="#{ajaxTesteBean.nome}" id ="nomeUp2"/>
+                <h:outputText value="#{ajaxTesteBean.sobrenome}" id ="sobrenomeUp2"/>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+
