@@ -23,6 +23,7 @@ public class AjaxTesteBean implements Serializable {
 
     private String nome;
     private String sobrenome;
+    private String email;
     private Map<String, List<String>> personagensQuadrinhoMap;
     private List<String> personagens;
     private String editora;
@@ -87,6 +88,14 @@ public class AjaxTesteBean implements Serializable {
 
     public String getEditora() {
         return editora;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setEditora(String editora) {
