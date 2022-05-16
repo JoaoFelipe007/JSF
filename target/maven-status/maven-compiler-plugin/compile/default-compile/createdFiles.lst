@@ -25,6 +25,7 @@ main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicacao11Bean.class
 main\br\com\devdojo\maratonaJsf\model\Estudante.class
 main\br\com\devdojo\maratonaJsf\bean\ajax\AjaxTesteBean.class
 main\br\com\devdojo\maratonaJsf\bean\session\TesteSessionBean.class
+main\br\com\devdojo\maratonaJsf\bean\Html5TesteBean.class
 main\br\com\devdojo\maratonaJsf\validators\Validators.class
 main\br\com\devdojo\maratonaJsf\bean\view\TesteViewBean.class
 main\br\com\devdojo\maratonaJsf\bean\comunicacao\TesteComunicacao9Bean.class
