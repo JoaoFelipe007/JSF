@@ -23,12 +23,28 @@
                 </h:commandButton>
                 <h:outputText value="#{ajaxTesteBean.nome}" id ="nomeUp"/>
                 <h:outputText value="#{ajaxTesteBean.sobrenome}" id ="sobrenomeUp"/>
+                <h:inputText value="#{ajaxTesteBean.nome}">
+                    <f:ajax event="blur" listener="#{ajaxTesteBean.toUpperCase2()}" render="@this nomeUp"/>
+                </h:inputText>
             </h:panelGrid>
         </h:form>
         <h:form id="form2">
             <h:panelGrid columns="1">
                 <h:outputText value="#{ajaxTesteBean.nome}" id ="nomeUp2"/>
                 <h:outputText value="#{ajaxTesteBean.sobrenome}" id ="sobrenomeUp2"/>
+            
+                <h:selectOneMenu value="#{ajaxTesteBean.editora}">
+                    <f:selectItem value="#{null}" itemLabel="Selecione uma Editora"/>
+                    <f:selectItems value="#{ajaxTesteBean.personagensQuadrinhoMap.keySet()}" var="editora"                      
+                                   itemLabel="#{editora}" itemValue="#{editora}"/>
+                    <f:ajax event="change" listener="#{ajaxTesteBean.selectEditora}" render="personagem"/>
+                </h:selectOneMenu>
+            
+                <h:selectOneMenu id="personagem" value="#{ajaxTesteBean.personagemSelecionado}">
+                    <f:selectItem value="#{null}" itemLabel="Selecione um personagem"/>
+                    <f:selectItems value="#{ajaxTesteBean.personagens}" var="personagem"
+                                   itemLabel="#{personagem}" itemValue="#{personagem}"/>
+                </h:selectOneMenu>
             </h:panelGrid>
         </h:form>
     </h:body>
