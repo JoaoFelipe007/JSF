@@ -14,11 +14,15 @@
         <p:messages>
             <p:autoUpdate/>
         </p:messages>
+<!--        <f:event type="preRenderView" listener=""/>-->
+        <f:metadata>
+            <f:viewAction action="#{ajaxTesteBean.init}" onPostback="true"/>
+        </f:metadata>
         <h1>Ajax 2</h1>
-        <h:outputText value="#{ajaxTesteBean.nome}" id="outside"/>
+         <h:outputText value="é uma requisição ajax?#{facesContext.postback}" id="postback"/>
         <h:form id="form">
             <h:panelGrid>
-                <f:ajax event="blur">
+                <f:ajax event="blur" render="postback">
                 <h:inputText value="#{ajaxTesteBean.email}" validator="#{validators.ValidateDuplicatedEmail}" id ="email" required="true"/>
                 <h:inputText value="#{ajaxTesteBean.nome}" id ="nome" required="true"/>
                 </f:ajax>

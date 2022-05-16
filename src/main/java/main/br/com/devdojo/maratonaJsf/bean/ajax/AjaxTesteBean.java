@@ -9,6 +9,7 @@ import static java.util.Arrays.asList;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+import javax.faces.context.FacesContext;
 import javax.faces.event.AjaxBehaviorEvent;
 import javax.faces.view.ViewScoped;
 import javax.inject.Named;
@@ -28,11 +29,13 @@ public class AjaxTesteBean implements Serializable {
     private List<String> personagens;
     private String editora;
     private String personagemSelecionado;
-    {
-        personagensQuadrinhoMap = new TreeMap<>();
-        personagensQuadrinhoMap.put("Marvel", asList("Homem Aranha", "Duende Verde", "Sentinela"));
-        personagensQuadrinhoMap.put("DC", asList("Batman", "Super Man", "Coringa"));
-        personagensQuadrinhoMap.put("Image", asList("Invencível", "Omini Men", "RexTotal"));
+
+    public void init() {
+            personagensQuadrinhoMap = new TreeMap<>();
+            personagensQuadrinhoMap.put("Marvel", asList("Homem Aranha", "Duende Verde", "Sentinela"));
+            personagensQuadrinhoMap.put("DC", asList("Batman", "Super Man", "Coringa"));
+            personagensQuadrinhoMap.put("Image", asList("Invencível", "Omini Men", "RexTotal"));
+        
     }
 
     public void toUpperCase(AjaxBehaviorEvent event) {
@@ -43,7 +46,7 @@ public class AjaxTesteBean implements Serializable {
     }
 
     public void selectEditora() {
-        if(editora == null){
+        if (editora == null) {
             this.personagens = null;
             return;
         }
