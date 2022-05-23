@@ -19,6 +19,8 @@ import javax.inject.Named;
 public class Html5TesteBean implements Serializable {
 
     private String email;
+    private String url;
+    private int number;
     private Map<String, String> attributes = new HashMap<>();
 
     public void init() {
@@ -26,10 +28,32 @@ public class Html5TesteBean implements Serializable {
         attributes.put("placeholder", "digite seu email");
     }
 
+    public void salvar(){
+        System.out.println(email);
+        System.out.println(url);
+        System.out.println(number);
+    }
+    
     public String getEmail() {
         return email;
     }
 
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+    
     public void setEmail(String email) {
         this.email = email;
     }
